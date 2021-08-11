@@ -1,0 +1,16 @@
+{
+  "name": "btn2pdf",
+  "version": "1.0.0",
+  "description": "click to print auto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsoup": "^1.0.0",
+    "jssoup": "^0.0.12",
+    "request": "^2.88.2"
+  }
+}

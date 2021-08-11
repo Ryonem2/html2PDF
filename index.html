@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
+    <title>Btn2PDF</title>
+    <style>
+        body {
+            margin: 0 200px 0 200px;
+        }
+        .imgComp {
+            justify-content: space-between;
+            display: flex;
+        }
+        .imgComp p{
+            margin: 10px;
+        }
+        .centerBtn {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="button" id="create_pdf" onclick="print('./index.html');" value="Generate PDF">   -->
+    <!-- <a href="window.print();"></a> -->
+    <div class="centerBtn">
+        <button class="btn">Print To PDF</button>
+    </div>
+    <div id="divContent" class="imgComp">
+        <img src="./232196111_531594254716232_150305111424526719_n.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea pariatur ducimus sit iure veniam. Veniam assumenda veritatis, voluptatum, quidem necessitatibus nam quam perspiciatis cupiditate quas officiis neque autem cum!
+        Veritatis perferendis quaerat dignissimos minima aspernatur nulla officia aliquam nostrum quis iusto ipsum deserunt qui at maxime, velit, ad dolor. Atque ullam, aperiam autem quidem consequatur quod nemo ea aliquam.
+        Eaque tenetur inventore commodi assumenda, quos cumque similique et corrupti facere doloremque earum qui minus neque quae! Voluptates reiciendis animi fugiat officia dolores qui ullam perspiciatis nulla, sit fuga molestias?
+        Ullam, ratione ipsa sit dignissimos fugiat iure reprehenderit, adipisci magnam voluptatibus soluta distinctio neque ipsum quas minima pariatur! Dolore fugiat molestiae pariatur maiores, repellat aut sit nam eligendi maxime quasi.
+        Numquam, veniam nesciunt. Veniam fugit nihil nostrum inventore praesentium at sit id rerum sunt dicta, necessitatibus blanditiis aliquid expedita odit, illo totam esse numquam nobis ipsa unde deleniti aut quis!
+        Quisquam, pariatur. Placeat, eaque ex. Iure quaerat eveniet, quis ex inventore ea ratione nostrum cupiditate id corrupti nobis fuga animi assumenda laudantium? Harum, adipisci. Eos laboriosam consectetur commodi perspiciatis exercitationem.
+        Praesentium harum cumque ipsa veritatis, aliquam dolorem doloremque laborum blanditiis beatae debitis ab vero optio quam laudantium vel numquam exercitationem laboriosam autem, totam asperiores perspiciatis enim dolores qui delectus. Veritatis.
+        Aut nostrum, ipsum quis incidunt quasi nulla distinctio voluptate quas reiciendis! Dolorum nobis, autem, rem quasi officia impedit sed distinctio repellat incidunt atque tempore et! Omnis veniam tempora in illo!
+        Ipsum ratione quis sunt dignissimos eum amet impedit ex quod maiores nemo, labore repudiandae adipisci architecto molestias harum blanditiis ullam iusto ab et quos? Ut voluptates perferendis veniam sint perspiciatis?
+        Vel nulla iste voluptate ipsa, at optio! Dolore nostrum ea reiciendis neque itaque? Sed soluta corporis eligendi quisquam in ad ipsum voluptatibus minima, magni sint deserunt exercitationem ullam debitis inventore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea pariatur ducimus sit iure veniam. Veniam assumenda veritatis, voluptatum, quidem necessitatibus nam quam perspiciatis cupiditate quas officiis neque autem cum!
+            Veritatis perferendis quaerat dignissimos minima aspernatur nulla officia aliquam nostrum quis iusto ipsum deserunt qui at maxime, velit, ad dolor. Atque ullam, aperiam autem quidem consequatur quod nemo ea aliquam.
+            Eaque tenetur inventore commodi assumenda, quos cumque similique et corrupti facere doloremque earum qui minus neque quae! Voluptates reiciendis animi fugiat officia dolores qui ullam perspiciatis nulla, sit fuga molestias?
+            Ullam, ratione ipsa sit dignissimos fugiat iure reprehenderit, adipisci magnam voluptatibus soluta distinctio neque ipsum quas minima pariatur! Dolore fugiat molestiae pariatur maiores, repellat aut sit nam eligendi maxime quasi.
+            Numquam, veniam nesciunt. Veniam fugit nihil nostrum inventore praesentium at sit id rerum sunt dicta, necessitatibus blanditiis aliquid expedita odit, illo totam esse numquam nobis ipsa unde deleniti aut quis!
+            Quisquam, pariatur. Placeat, eaque ex. Iure quaerat eveniet, quis ex inventore ea ratione nostrum cupiditate id corrupti nobis fuga animi assumenda laudantium? Harum, adipisci. Eos laboriosam consectetur commodi perspiciatis exercitationem.
+            Praesentium harum cumque ipsa veritatis, aliquam dolorem doloremque laborum blanditiis beatae debitis ab vero optio quam laudantium vel numquam exercitationem laboriosam autem, totam asperiores perspiciatis enim dolores qui delectus. Veritatis.
+            Aut nostrum, ipsum quis incidunt quasi nulla distinctio voluptate quas reiciendis! Dolorum nobis, autem, rem quasi officia impedit sed distinctio repellat incidunt atque tempore et! Omnis veniam tempora in illo!
+            Ipsum ratione quis sunt dignissimos eum amet impedit ex quod maiores nemo, labore repudiandae adipisci architecto molestias harum blanditiis ullam iusto ab et quos? Ut voluptates perferendis veniam sint perspiciatis?
+            Vel nulla iste voluptate ipsa, at optio! Dolore nostrum ea reiciendis neque itaque? Sed soluta corporis eligendi quisquam in ad ipsum voluptatibus minima, magni sint deserunt exercitationem ullam debitis inventore.</p>
+    </div>
+    <div class="imgComp">
+        <img src="./232196111_531594254716232_150305111424526719_n.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ea pariatur ducimus sit iure veniam. Veniam assumenda veritatis, voluptatum, quidem necessitatibus nam quam perspiciatis cupiditate quas officiis neque autem cum!
+        Veritatis perferendis quaerat dignissimos minima aspernatur nulla officia aliquam nostrum quis iusto ipsum deserunt qui at maxime, velit, ad dolor. Atque ullam, aperiam autem quidem consequatur quod nemo ea aliquam.
+        Eaque tenetur inventore commodi assumenda, quos cumque similique et corrupti facere doloremque earum qui minus neque quae! Voluptates reiciendis animi fugiat officia dolores qui ullam perspiciatis nulla, sit fuga molestias?
+        Ullam, ratione ipsa sit dignissimos fugiat iure reprehenderit, adipisci magnam voluptatibus soluta distinctio neque ipsum quas minima pariatur! Dolore fugiat molestiae pariatur maiores, repellat aut sit nam eligendi maxime quasi.
+        Numquam, veniam nesciunt. Veniam fugit nihil nostrum inventore praesentium at sit id rerum sunt dicta, necessitatibus blanditiis aliquid expedita odit, illo totam esse numquam nobis ipsa unde deleniti aut quis!
+        Quisquam, pariatur. Placeat, eaque ex. Iure quaerat eveniet, quis ex inventore ea ratione nostrum cupiditate id corrupti nobis fuga animi assumenda laudantium? Harum, adipisci. Eos laboriosam consectetur commodi perspiciatis exercitationem.
+        Praesentium harum cumque ipsa veritatis, aliquam dolorem doloremque laborum blanditiis beatae debitis ab vero optio quam laudantium vel numquam exercitationem laboriosam autem, totam asperiores perspiciatis enim dolores qui delectus. Veritatis.
+        Aut nostrum, ipsum quis incidunt quasi nulla distinctio voluptate quas reiciendis! Dolorum nobis, autem, rem quasi officia impedit sed distinctio repellat incidunt atque tempore et! Omnis veniam tempora in illo!
+        Ipsum ratione quis sunt dignissimos eum amet impedit ex quod maiores nemo, labore repudiandae adipisci architecto molestias harum blanditiis ullam iusto ab et quos? Ut voluptates perferendis veniam sint perspiciatis?
+        Vel nulla iste voluptate ipsa, at optio! Dolore nostrum ea reiciendis neque itaque? Sed soluta corporis eligendi quisquam in ad ipsum voluptatibus minima, magni sint deserunt exercitationem ullam debitis inventore.</p>
+    </div>
+    <a href="http://127.0.0.1:5500/index.html" download="output.txt">Load</a>
+    <script src="./app.js"></script>
+    <!-- <script src="./test.js"></script> -->
+    
+
+</body>
+</html>
