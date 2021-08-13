@@ -1,26 +1,38 @@
 const btn = document.querySelector(".btn");
-const request = require('request');
-
 
 btn.addEventListener("click", function () {
-    // const bodys = document.getElementsByTagName('body');
-    request('http://localhost/Btn2PDF/index.html', function (
-      error,
-      response,
-      body
-    ) {
-      // console.error('error:', error)
-      // console.log('body:', body)
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", './download.php', true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(JSON.stringify({  //? send JSON by POST method
-        body: body
-    }));
-    })
-    
-    // window.location.href = "http://localhost/sig2/docs/";
-    alert("Saved!!");
+  // var string = document.documentElement.innerHTML;
+  const str = $("body").html();
+  // const str = String(string);
+  //   var xhr = new XMLHttpRequest();
+  //   xhr.open("POST", './download.php', true);
+  //   xhr.setRequestHeader('Content-Type', 'application/json');
+  //   xhr.send(JSON.stringify({  //? send JSON by POST method
+  //     body: str
+  // }));
+  const doc = new jsPDF();
+
+  var specialElementHandlers = function (element, renderer) {
+    return true;
+  };
+  html2canvas(document.body,{
+  onrendered:function(canvas){
+  doc.fromHTML(
+    str,
+    0,
+    0,
+    {
+      width: 100, // max width of content on PDF
+      elementHandlers: specialElementHandlers,
+    },
+    function (bla) {
+      doc.save("saveInCallback.pdf");
+    }
+  );
+  }
+});
+  alert("Saved!!");
+  console.log(str);
 });
 
 // btn.addEventListener("click", myPrint);
